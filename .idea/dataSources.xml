@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="249600557">
+    <data-source source="LOCAL" name="H2 - market" uuid="0d27fb65-f533-446d-9e17-51075b404d1a">
+      <driver-ref>h2.embedded</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:/usr/local/h2/market</jdbc-url>
+      <libraries>
+        <library>
+          <url>file:///usr/local/h2/bin/h2-1.4.188.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <users user_id="1" first_name="Admin" last_name="Admin" email="admin@gmail.com" phone="0987654321" password="123456" role="1" />
+    <users user_id="2" first_name="John" last_name="Dou" email="dou@gmail.com" phone="1234567890" password="123456" role="2" />
+
+    <product product_id="1" name="Apple iPad Air 2 16GB" picture="/resources/img/category/tablets/Apple_iPad_Air_2_16GB.jpg"
+             price="499.99" count="3444" category="1"
+             description="9.7 Retina Display with 2048 x 1536 resolution, Apple iOS 7, 16GB storage capacity, Wi-Fi, 5.0MP iSight camera" />
+    <product product_id="2" name="HP Pavilion Intel Pentium 500GB" picture="/resources/img/category/laptops/HP_Pavilion_Intel_Pentium_500GB.jpg"
+             price="399.99" count="0" category="2"
+             description="Windows 8.1 64-bit, Intel Pentium processor, 11.6 display, 4GB memory, 500GB hard drive, Bluetooth, touch screen" />
+    <product product_id="3" name="Asus Portable 1TB" picture="/resources/img/category/desktops/Asus_Portable_1TB.jpg"
+             price="899.99" count="40" category="3"
+             description="Windows 8.1 64-bit, Intel Core i5 processor, 19.5 display, 8GB memory, 1TB hard drive, Touch screen, Bluetooth" />
+
+    <user_order user_order_id="1" order_date="2015-09-10 11:00:00" user_id="2" total_price="499.99" />
+
+    <product_outcome product_outcome_id="1" product="1" count="1" user_order="1" />
+</dataset>

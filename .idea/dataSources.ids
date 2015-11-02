@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="H2 - market" uuid="0d27fb65-f533-446d-9e17-51075b404d1a">
+    <database-info product="H2" version="1.4.188 (2015-08-01)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.188 (2015-08-01)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="MARKET"/>
+  </data-source>
+</component>

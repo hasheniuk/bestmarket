@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <users first_name="Admin" last_name="Admin" email="admin@gmail.com" phone="0987654321" password="123456" role="1" />
+    <users first_name="John" last_name="Dou" email="dou@gmail.com" phone="1234567890" password="123456" role="2" />
+    <users first_name="firstname" last_name="lastname" email="some@mail.com" phone="(099) 999-99-99" password="123456" role="2" />
+</dataset>

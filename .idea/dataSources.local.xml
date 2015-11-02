@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="H2 - market" uuid="0d27fb65-f533-446d-9e17-51075b404d1a">
+      <secret-storage>master_key</secret-storage>
+      <user-name>sa</user-name>
+      <schema-pattern>MARKET.PUBLIC</schema-pattern>
+      <default-schemas>MARKET.PUBLIC</default-schemas>
+    </data-source>
+  </component>
+</project>

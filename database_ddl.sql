@@ -1,0 +1,47 @@
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users(
+  user_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  email VARCHAR(30) NOT NULL UNIQUE,
+  phone VARCHAR(20) NOT NULL,
+  password VARCHAR(30) NOT NULL,
+  role TINYINT UNSIGNED NOT NULL,
+  CONSTRAINT pkUserId PRIMARY KEY (user_id),
+  CONSTRAINT ixUserMail UNIQUE KEY (email)
+);
+
+DROP TABLE IF EXISTS product;
+CREATE TABLE product(
+  product_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(45) NOT NULL UNIQUE,
+  picture TEXT NOT NULL,
+  price DECIMAL(10,2) UNSIGNED NOT NULL,
+  count MEDIUMINT UNSIGNED NOT NULL,
+  category TINYINT UNSIGNED NOT NULL,
+  description TEXT DEFAULT NULL,
+  CONSTRAINT pkProductId PRIMARY KEY (product_id),
+  CONSTRAINT ixProductName UNIQUE KEY (name)
+);
+
+DROP TABLE IF EXISTS user_order;
+CREATE TABLE user_order(
+  user_order_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  order_date DATETIME NOT NULL,
+  user_id BIGINT UNSIGNED NOT NULL,
+  total_price DECIMAL(10,2) UNSIGNED NOT NULL,
+  CONSTRAINT pkUserOrderId PRIMARY KEY (user_order_id),
+  FOREIGN KEY (user_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS product_outcome;
+CREATE TABLE product_outcome(
+  product_outcome_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  product BIGINT UNSIGNED NOT NULL,
+  count MEDIUMINT NOT NULL,
+  user_order BIGINT UNSIGNED NOT NULL,
+  CONSTRAINT pkProductOutcomeId PRIMARY KEY (product_outcome_id),
+  FOREIGN KEY (product) REFERENCES product(product_id),
+  FOREIGN KEY (user_order) REFERENCES user_order(user_order_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
